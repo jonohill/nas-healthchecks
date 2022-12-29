@@ -19,9 +19,9 @@ while true; do
     done
 
     if [ -n "$logs" ]; then
-        curl --data-raw "$logs" "$PING_URL/fail"
+        curl --quiet --data-raw "$logs" "$PING_URL/fail"
     else
-        curl "$PING_URL"
+        curl --quiet "$PING_URL"
     fi
 
     sleep "$RUN_FREQ"
