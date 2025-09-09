@@ -1,4 +1,4 @@
-FROM debian:13.0-slim
+FROM debian:13.1-slim
 
 RUN apt-get update && apt-get install -y \
         curl \
